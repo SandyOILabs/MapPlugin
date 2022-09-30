@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mapbox_gl/mapbox_gl.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class TestMapPlugin extends StatefulWidget {
   const TestMapPlugin({Key? key}) : super(key: key);
@@ -13,6 +14,7 @@ class _TestMapPluginState extends State<TestMapPlugin> {
   var styleString =
       'mapbox://styles/merrillgonsalves/cl5ez27io005p14rz5aqp8234';
   late MapboxMapController controller;
+  var MAPBOX_ACCESS_TOKEN="sk.eyJ1IjoibWVycmlsbGdvbnNhbHZlcyIsImEiOiJja2l6eno3ZWk0ZnYxMnNsYng5azdxdjBiIn0.fkx2_7LZ7uq80mHYCuh46w";
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +31,8 @@ class _TestMapPluginState extends State<TestMapPlugin> {
         zoom: 11.0,
       ),
         tiltGesturesEnabled: true,
-        accessToken: "sk.eyJ1IjoibWVycmlsbGdvbnNhbHZlcyIsImEiOiJja2l6eno3ZWk0ZnYxMnNsYng5azdxdjBiIn0.fkx2_7LZ7uq80mHYCuh46w",
+        // accessToken: dotenv.env['MAPBOX_ACCESS_TOKEN'],
+        accessToken: MAPBOX_ACCESS_TOKEN,
         onMapCreated: (MapboxMapController controller){},
         trackCameraPosition: true,
         onCameraTrackingChanged: (mode) {
