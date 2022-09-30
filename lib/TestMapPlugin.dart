@@ -10,7 +10,9 @@ class TestMapPlugin extends StatefulWidget {
 
 class _TestMapPluginState extends State<TestMapPlugin> {
 
-  static const String ACCESS_TOKEN = String.fromEnvironment("ACCESS_TOKEN");
+  var styleString =
+      'mapbox://styles/merrillgonsalves/cl5ez27io005p14rz5aqp8234';
+  late MapboxMapController controller;
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +23,29 @@ class _TestMapPluginState extends State<TestMapPlugin> {
     return Container(
       width: width,
       height: height,
-      child: MapboxMap(initialCameraPosition: CameraPosition(
+      child: MapboxMap(
+          initialCameraPosition: CameraPosition(
         target: LatLng(-33.852, 151.211),
         zoom: 11.0,
-      )),
+      ),
+        tiltGesturesEnabled: true,
+        accessToken: "sk.eyJ1IjoibWVycmlsbGdvbnNhbHZlcyIsImEiOiJja2l6eno3ZWk0ZnYxMnNsYng5azdxdjBiIn0.fkx2_7LZ7uq80mHYCuh46w",
+        onMapCreated: (MapboxMapController controller){},
+        trackCameraPosition: true,
+        onCameraTrackingChanged: (mode) {
+          // print("mode.name ${mode}");
+          // print("mode.name ${mode.name}");
+        },
+
+        onStyleLoadedCallback: (){},
+        // onStyleLoadedCallback: () => addSymbol(controller),
+        // myLocationEnabled: true,
+        myLocationTrackingMode: MyLocationTrackingMode.TrackingGPS,
+        // minMaxZoomPreference:
+        //     const MinMaxZoomPreference(14, 17),
+        annotationOrder: [AnnotationType.symbol],
+        styleString: styleString,
+      ),
     );
   }
 }
