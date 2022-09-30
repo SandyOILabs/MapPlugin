@@ -1,10 +1,3 @@
+library map_plugin;
 
-import 'map_plugin_platform_interface.dart';
-
-class MapPlugin {
-  Future<String?> getPlatformVersion() {
-    return MapPluginPlatform.instance.getPlatformVersion();
-  }
-}
-
-
+export './test_map_plugin.dart';
