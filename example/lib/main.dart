@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:flutter/services.dart';
-import 'package:map_plugin/map_plugin.dart';
 import 'package:map_plugin/test_map_plugin.dart';
 
 void main() {
@@ -55,7 +53,7 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
-        body: const TestMapPlugin(),
+        body: const TestPlugin(),
       ),
     );
   }
