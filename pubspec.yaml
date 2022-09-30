@@ -1,6 +1,6 @@
 name: map_plugin
 description: A new Flutter plugin project.
-version: 0.0.1
+version: 0.0.11
 homepage:
 
 environment:
@@ -11,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   plugin_platform_interface: ^2.0.2
+  mapbox_gl: ^0.16.0
 
 dev_dependencies:
   flutter_test:

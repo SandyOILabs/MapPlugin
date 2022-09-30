@@ -6,3 +6,5 @@ class MapPlugin {
     return MapPluginPlatform.instance.getPlatformVersion();
   }
 }
+
+
