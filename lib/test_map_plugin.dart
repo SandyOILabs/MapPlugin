@@ -4,14 +4,14 @@ import 'package:mapbox_gl/mapbox_gl.dart';
 import 'http/services.dart';
 import 'models/poi_model.dart';
 
-class TestMapPlugin extends StatefulWidget {
-  const TestMapPlugin({Key? key}) : super(key: key);
+class TestPlugin extends StatefulWidget {
+  const TestPlugin({Key? key}) : super(key: key);
 
   @override
-  State<TestMapPlugin> createState() => _TestMapPluginState();
+  State<TestPlugin> createState() => _TestPluginState();
 }
 
-class _TestMapPluginState extends State<TestMapPlugin> {
+class _TestPluginState extends State<TestPlugin> {
   var styleString =
       'mapbox://styles/merrillgonsalves/cl5ez27io005p14rz5aqp8234';
   late MapboxMapController controller;
