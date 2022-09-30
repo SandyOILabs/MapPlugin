@@ -4,6 +4,9 @@ import 'package:mapbox_gl/mapbox_gl.dart';
 import 'http/services.dart';
 import 'models/poi_model.dart';
 
+export 'http/services.dart';
+export 'models/poi_model.dart';
+
 class TestPlugin extends StatefulWidget {
   const TestPlugin({Key? key}) : super(key: key);
 
