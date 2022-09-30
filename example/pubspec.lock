@@ -93,6 +93,20 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  http:
+    dependency: "direct main"
+    description:
+      name: http
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.13.5"
+  http_parser:
+    dependency: transitive
+    description:
+      name: http_parser
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.0.1"
   image:
     dependency: transitive
     description:
@@ -120,7 +134,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.0.14"
+    version: "0.0.22"
   mapbox_gl:
     dependency: transitive
     description:
